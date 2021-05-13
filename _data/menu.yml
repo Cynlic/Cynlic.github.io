@@ -1,9 +1,9 @@
 entries:
   - title: personal info
     entries:
-      - title: name\: H. Montgomery
-      - title: pronouns\: they/them
-      - title: site theme\: "no-style-please" 
+      - title: H. Montgomery
+      - title: pronouns --- they/them
+      - title: site theme --- "no-style-please" 
         url: https://github.com/riggraz/no-style-please
         entries: 
           - title: "used by <a href='https://riggraz.dev'>riggraz.dev</a> and <a href='https://github.com/riggraz/no-style-please/network/dependents'>many others</a>"
