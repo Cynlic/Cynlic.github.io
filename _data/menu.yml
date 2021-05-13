@@ -10,3 +10,7 @@ entries:
   - title: all posts
     post_list:
       limit: 5
+  - title: projects
+    entries: 
+      - title: antiPode
+        url: antipode
