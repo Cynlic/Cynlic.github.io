@@ -13,11 +13,26 @@
           zoom: 11,
         });
 
+	const contentstring =
+		      "<h1>Barton Creek</h1>" +
+		      "<audio controls>" +
+		      '<source src="/assets/audio/roy.mp3" type="audio/mpeg">' + 
+		      "Error: Your browser does not support audio." +
+		      "</audio>";
         const barton = { lat: 30.247, lng: -97.812};
+
+	const infowindow = new google.maps.InfoWindow({
+		content: contentstring,
+	});
+
 	const marker = new google.maps.Marker({
 		position: barton,
 		map,
-		title: "Barton Green Belt"});
+		title: "Barton Green Belt",
+	});
+	marker.addListener("click", () => {
+		infowindow.open(map, marker);
+		});
       }
 
 </script>

@@ -28,7 +28,7 @@ url: "" # the base hostname & protocol for your site, e.g. http://example.com
 github_username:  Cynlic
 google_maps_javascript_api_key: "AIzaSyCKEYSn48YSZtVyrzjnNSpnx_BnLYmW3HE"
 # Build settings
-remote_theme: riggraz/no-style-please
+theme: no-style-please
 plugins:
   - jekyll-feed
 
