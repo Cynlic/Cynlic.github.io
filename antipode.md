@@ -3,4 +3,7 @@ layout: page
 title: antiPode
 ---
 
-This is a place holder for the antiPode object. https://youtu.be/Hw6SO5-31pw
+
+This is a place holder for the antiPode object. 
+{% include youtubePlayer.html id="Hw6SO5-31pw" %}
+
