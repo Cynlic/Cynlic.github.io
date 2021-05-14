@@ -1,0 +1,22 @@
+I"¹<p>This is a place holder for the antiPode object.</p>
+<style type="text/css">
+      #map {
+        height: 500px;
+	width: 100%;
+      }
+
+</style>
+
+<script type="text/javascript" src="/assets/js/mapping.js">
+</script>
+
+<div id="map"></div>
+
+<!-- Async script executes immediately and must be after any DOM elements used in callback. -->
+<script src="https://maps.googleapis.com/maps/api/js?key=AIzaSyCKEYSn48YSZtVyrzjnNSpnx_BnLYmW3HE&amp;callback=initMap&amp;libraries=&amp;v=weekly" async=""></script>
+
+<iframe width="560" height="315" src="https://www.youtube.com/embed/Hw6SO5-31pw" frameborder="0" allowfullscreen=""></iframe>
+
+<iframe src="https://docs.google.com/presentation/d/e/2PACX-1vSnM9qVM730knsSTUeNQnzsdtEd9WS4euG-7d0TjNwKGEhIbd5rsvASdCoD4O2wxcpREKodO5gYnQCd/embed?start=false&amp;loop=false&amp;delayms=3000" frameborder="0" width="960" height="569" allowfullscreen="true" mozallowfullscreen="true" webkitallowfullscreen="true"></iframe>
+
+:ET

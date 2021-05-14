@@ -10,3 +10,4 @@ This is a place holder for the antiPode object.
 
 {% include youtubePlayer.html id="Hw6SO5-31pw" %}
 
+{% include google-slides-embed.html %}
