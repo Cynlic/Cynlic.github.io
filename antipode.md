@@ -90,8 +90,6 @@ Currently my amplification setup only allows for mono output, but the experience
 
 {% include youtubePlayer.html id="Hw6SO5-31pw" %}
 
-{% include google-slides-embed.html %}
-
 ## Further Work
 
 Like many of my projects, the antiPode is somewhere between system, practice, and object. 
