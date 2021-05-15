@@ -10,7 +10,7 @@ title: antiPode
 It is hard to live in Austin long and not notice the abundance of green space which threads through the city in a series of greenbelts, metropolitan parks, and natural landmarks.
 Such spaces have long been a major part of the city's attraction to knowledge workers, and have offered a manicured common space for hiking, biking, rock climbing, water activities and more.
 However, as Andrew Busch (2017) contends, the taught loop of rhetoric which surrounds environmentalism, sustainablity, and "greenness" has long been a entwined with the city's "progressive investment in whiteness." 
-The city's production of a interface between burgeoning technopolis and delicately maintained garden has engendered particular inequities across lines of race and class which grant the experience of these spaces as fraught forms of recreation.
+Austin's production of a interface between burgeoning technopolis and delicately maintained garden has engendered particular inequities across lines of race and class which grant the experience of these spaces as fraught forms of recreation.
 
 The antiPode is an experimental object which asks a simple question: _how can we listen against the grain of the environmental narrative?_
 While the project is theoretically ongoing, it has taken definable shape as a three step process: 
@@ -28,7 +28,7 @@ Below are descriptions of the antiPode, how I made it, and a short performance w
 
 My plan for the antiPode was to create an object which you could take on a hike, plug it into the soil, and listen to an acoustic environment which was in some moments radically different and in others nearly identical to the sound just beyond your headphones.
 My platform of choice was the [bela](https://bela.io), a computer roughly the size of a large wallet which is capable of running high performance audio-code. 
-After much testing, the easiest solution was to connect a series of sensors from the maker platform [adafruit](https://www.adafruit.com/) such as [this soil sensor](https://www.adafruit.com/product/4026).
+After much testing, the easiest solution was to connect a series of sensors from the maker platform [adafruit](https://www.adafruit.com/), such as [this soil sensor](https://www.adafruit.com/product/4026).
 
 Unfortunately, getting data to-and-from the bela was a complex task, so the sensors connect to an [RP2040-based microcontroller](https://www.adafruit.com/product/4884) which polls them for data and communicates with the bela via USB. 
 This isn't an ideal setup for complex reasons such as the encoding of numerical data into text, but it has the benefit of being very simple to tinker with. 

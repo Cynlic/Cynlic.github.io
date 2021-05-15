@@ -28,6 +28,10 @@ url: "" # the base hostname & protocol for your site, e.g. http://example.com
 github_username:  Cynlic
 # Build settings
 remote_theme: riggraz/no-style-please
+
+theme_options: 
+  appearance: "light"
+
 plugins:
   - jekyll-feed
 
