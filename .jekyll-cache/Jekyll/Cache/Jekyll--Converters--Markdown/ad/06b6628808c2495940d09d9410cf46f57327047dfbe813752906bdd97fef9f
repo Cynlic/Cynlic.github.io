@@ -1,0 +1,77 @@
+I"P<h2 id="introduction">Introduction</h2>
+
+<p>While slightly less visible than the nightlife scene making its post-vaccination comeback, one would be hard-pressed to live in Austin long and not notice the abundance of green space which threads through the city in a series of greenbelts, metropolitan parks, and natural landmarks.
+Such spaces have long been a major part of the city’s attraction to “knowledge workers,” and have offered a manicured common space for hiking, biking, rock climbing, water activities and more.
+However, as Andrew Busch (2017) contends, the taught loop of rhetoric which surrounds environmentalism, sustainablity, and “greenness” has long been a entwined with the city’s “progressive investment in whiteness.” 
+The city’s production of a unique interface between burgeoning technopolis and manicured garden has engendered particular inequities across lines of class and race which grant the experience of these spaces as fraught forms of recreation.</p>
+
+<p>The antiPode is an experimental object which asks a simple question: <em>how can we listen against the grain of the environmental narrative?</em>
+While the project is theoretically ongoing, it has taken definable shape as a three step process:</p>
+<ol>
+  <li>Make recordings of Austin greenspace, attempting to focus on features of their emplacement in the city (i.e. emphasize the unique ways they mediate traffic noise rather than idyllic bird song.</li>
+  <li>Remediate recordings (applying effects of sound design such as filtering, feedback, delay, and so forth).</li>
+  <li>Dynamically mix between original and remediate recordings via hardware sensors.</li>
+</ol>
+
+<p>Here you will find a sampling of recordings I have made (they are pseudo-binaural so headphones work best) on custom google map of the approximate location where I took them. 
+Below are descriptions of the antiPode, how I made it, and a short performance with it.</p>
+
+<style type="text/css">
+      #map {
+        height: 500px;
+	width: 100%;
+      }
+
+</style>
+
+<script type="text/javascript" src="/assets/js/mapping.js">
+</script>
+
+<div id="map"></div>
+
+<!-- Async script executes immediately and must be after any DOM elements used in callback. -->
+<script src="https://maps.googleapis.com/maps/api/js?key=AIzaSyCKEYSn48YSZtVyrzjnNSpnx_BnLYmW3HE&amp;callback=initMap&amp;libraries=&amp;v=weekly" async=""></script>
+
+<h2 id="how-to-listen-with-sensors">How to Listen With Sensors</h2>
+
+<p>My plan for the antiPode was to create an object which you could take on a hike through the greenbelt(s), plug it into the soil, and listen to an acoustic environment which was, in some moments radically different and in others nearly identical to the sound just beyond the headphones.
+My platform of choice was the <a href="https://bela.io">bela</a>, a computer about the size of a large wallet which is capable of running high performance audio-code. 
+After much testing, the easiest solution was to connect a series of sensors from the maker platform <a href="https://www.adafruit.com/">adafruit</a> such as <a href="https://www.adafruit.com/product/4026">this soil sensor</a>.
+Unfortunately, getting data to-and-from the bela was a complex task, so the sensors connect to an <a href="https://www.adafruit.com/product/4884">RP2040-based microcontroller</a> which polls them for data and communicates with the bela via USB. 
+This isn’t an ideal set up in my opinion, but it has the benefit of being very simple to tinker with. Here is the microcontroller code, which sets up the sensors on boot and pipes their data to the bela:</p>
+
+<div class="language-plaintext highlighter-rouge"><div class="highlight"><pre class="highlight"><code>mport time
+import adafruit_bmp280     
+import adafruit_tsl2591
+from board import SCL, SDA
+import busio
+from adafruit_seesaw.seesaw import Seesaw
+     
+i2c_bus = busio.I2C(SCL, SDA)     
+seesaw = Seesaw(i2c_bus, addr=0x36)
+sensor = adafruit_bmp280.Adafruit_BMP280_I2C(i2c_bus)
+light = adafruit_tsl2591.TSL2591(i2c_bus)
+sensor.sea_level_pressure = 1004.6 
+light.gain = adafruit_tsl2591.GAIN_LOW
+
+while True:
+    # read moisture level through capacitive touch pad
+    touch = seesaw.moisture_read()
+    # read temperature from the temperature sensor
+    temp = seesaw.get_temp()
+    alt = sensor.altitude
+    lux = light.lux
+
+    print("T: " + str(temp))
+    time.sleep(0.002)
+    print("M: " + str(touch))
+    time.sleep(0.002)
+    print("A: " + str(alt))
+    time.sleep(0.002)
+    print("L: " + str(lux))
+    time.sleep(0.002)
+</code></pre></div></div>
+
+<iframe width="560" height="315" src="https://www.youtube.com/embed/Hw6SO5-31pw" frameborder="0" allowfullscreen=""></iframe>
+
+:ET
