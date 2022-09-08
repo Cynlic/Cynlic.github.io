@@ -9,7 +9,7 @@ title: antiPode
 
 It is hard to live in Austin long and not notice the abundance of green space which threads through the city in a series of greenbelts, metropolitan parks, and natural landmarks.
 Such spaces have long been a major part of the city's planned attraction of knowledge workers, and have offered a manicured commons for hiking, biking, rock climbing, water activities and more.
-However, as Andrew Busch (2017) contends, the taut loop of rhetoric which surrounds environmentalism, sustainablity, and "greenness" has long been a entwined with the city's "progressive investment in whiteness." 
+However, as Andrew Busch (2017) contends, the taut loop of rhetoric which surrounds environmentalism, sustainablity, and "greenness" has long been a entwined with the city's "possessive investment in whiteness." 
 Austin's production of an interface between burgeoning technopolis and delicately maintained garden has engendered inequities across lines of race and class which reframe the experience of these spaces as fraught forms of recreation.
 
 The antiPode is an experimental object which asks a simple question: _how can we listen against the grain of the environmental narrative?_
