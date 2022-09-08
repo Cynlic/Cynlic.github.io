@@ -29,8 +29,7 @@ github_username:  Cynlic
 # Build settings
 remote_theme: riggraz/no-style-please
 
-theme_options: 
-  appearance: "light"
+
 
 plugins:
   - jekyll-feed
